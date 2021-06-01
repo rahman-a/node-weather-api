@@ -1,0 +1,409 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Start Reset Styles */
+
+html {
+    font-size: 62.5%;
+}
+
+@media only screen and (max-width: 50em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+*,
+*::after,
+*::before {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    color:#d1d1d1;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+
+/* End Reset Styles */
+
+/* Start Main Styles */
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.3)),url(img/sky.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 5rem;
+    letter-spacing: 4px;
+    margin: 2rem 0;
+    color: #071f38;
+}
+
+@media only screen and (max-width: 50em) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+/* Start Form Styles */
+
+.entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin:5rem;
+    position: relative;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .entry {
+        flex-direction: column;
+    }
+}
+
+.entry__block {
+    margin-right: 0rem;
+    align-self: stretch;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .entry__block {
+        align-self: unset;
+        overflow:unset;
+    }
+}
+
+.entry__input {
+    all: unset;
+    display: block;
+    width: 100%;
+    border: 2px solid #fdfdfd;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 37.5em) {
+    .entry__input {
+        padding: 1rem  0.5rem;
+        width:95%;
+    }
+}
+
+.entry__input:focus {
+    background-color: rgba(209,209,209,0.5);
+    color:#000;
+    font-weight: 700;
+}
+
+::placeholder { 
+    color: #dadada;
+    opacity:0.8;
+ }
+ 
+ ::-ms-input-placeholderr {
+     color: #dadada;
+     opacity:0.8;
+ }
+ 
+ :-ms-input-placeholder {
+     color: #dadada;
+     opacity:0.8;
+ }
+
+.entry__input:focus::placeholder{
+    color:#000;
+    font-weight: 700;
+}
+
+.entry__block:first-child {
+    width:40%;
+}
+
+@media only screen and (max-width: 50em) {
+    .entry__block:first-child {
+        width:80%;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .entry__block:first-child {
+        width: 95%;
+        margin: 0 1rem;
+    }
+}
+
+#zip {
+    border-top-left-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    #zip {
+        border-top-right-radius: 1rem;
+    }
+}
+
+
+#feel {
+    border-bottom-left-radius: 1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    #feel {
+        border-bottom-right-radius: 1rem;
+    }
+}
+
+#generate {
+    all: unset;
+    border: 2px solid #fff;
+    height: 97%;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-weight: 700;
+    letter-spacing: 2px;
+    width:8rem;
+    background-color: rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 37.5em) {
+    #generate {
+        margin-top: 2rem;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+
+    }
+}
+
+#generate img {
+    width:100%;
+    height: 1rem;
+    transform: scale(5);
+}
+
+#generate:hover {
+    background-color: #113e46;
+    color:#fff;
+}
+
+#generate:active {
+    background-color: #407984;
+}
+
+.entry__errors {
+    position: absolute;
+    top: -7rem;
+    list-style: none;
+    color: #771111;
+    font-size: 1.7rem;
+    font-weight: 700;
+    transition: all 0.5s ease;
+    opacity:1;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .entry__errors {
+        top:unset;
+        bottom:-10rem;
+    }
+}
+
+.entry__errors li {
+    background: rgb(255 207 207 / 50%);
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* End Form Styles */
+
+/* Start Weather Data Styles */
+
+.weather {
+    width: 100vw;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+
+.wrapper {
+    width: 55%;
+    padding: 0 3rem;
+    background-color: rgb(0 0 0 / 50%);
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 50em) {
+    .wrapper {
+        width:90%;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .wrapper {
+        padding:0;
+        width:100%;
+        border-radius: unset;
+        box-shadow: unset;
+    }
+}
+
+#city {
+    font-size: 6rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    #city{
+        padding:0 1rem;
+        font-size: 3.5rem;
+    }
+}
+
+#country {
+    font-size: 3rem;
+}
+
+.weather__state {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 4rem  0;
+}
+
+.weather__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#state {
+    font-size: 3rem;
+    position: absolute;
+    width: max-content;
+    bottom: -1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    #state {
+        font-size: 2.5rem;
+    }
+}
+
+#icon {
+    width: 100%;
+}
+
+.weather__temp {
+    display: flex;
+}
+
+#temp {
+    font-size: 8rem;
+}
+
+.weather__unit {
+    font-size: 3rem;
+}
+
+.weather__data {
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem 0 3rem 0;
+}
+
+.weather__date {
+    margin-top:2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .weather__date {
+        padding:0 1rem;
+    }
+}
+
+#content {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    text-align: center;
+    background-color: rgb(0 128 128 / 50%);
+    padding: 1rem 0;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+/* End Weather Data Styles */
+
+.copy {
+    width: 100%;
+    background: rgb(3 27 40);
+    border-top: 1px solid #d1d1d1;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.copy a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copy a:hover {
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 37.5em) {
+    .api,
+    .bg,
+    .icons,
+    .developer {
+        padding:0.5rem;
+    }
+}
+
+
+/* End Main Styles */
+

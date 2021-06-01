@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div id="app">
+        <h1 class="app__header">Weather Journal App</h1>
+        <div class="weather">
+            <div class="wrapper">
+                <div class="weather__date">
+                    <div id="date"></div>
+                </div>
+                <div class="weather__location">
+                    <span id="city"></span>
+                    <span id="country"></span>
+                </div>
+                <div class="weather__state">
+                    <div class="weather__icon" title="Weather State">
+                        <img src="" alt="weather icon" id="icon">
+                        <span id="state"></span>
+                    </div>
+                    <div class="weather__temp" title="Atmospheric Temperature">
+                        <span id="temp"></span>
+                        <span class="weather__unit">C<sup>o</sup></span>
+                    </div>
+                </div>
+                <div class="weather__data">
+                    <div class="weather__humidity" title="Humidity">
+                        <i class="fa fa-tint" aria-hidden="true"></i>
+                        <span id="humidity"></span>
+                    </div>
+                    <div class="weather__pressure" title="Atmospheric Pressure">
+                        <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+                        <span id="pressure"></span>
+                    </div>
+                    <div class="weather__wind" title="Wind Speed">
+                        <i class="fas fa-wind" aria-hidden="true"></i>
+                        <span id="wind"></span>
+                    </div>
+                </div>
+                <div id="content" title="Your Feelings Today"></div>
+            </div>
+        </div>
+        <form action="" class="entry">
+            <div class="entry__block">
+                <input type="number" id="zip" class="entry__input" placeholder="Enter Zip Code Here....">
+                <textarea id="feel" class="entry__input" placeholder="Tell Us What You Feel Today ?"></textarea>
+            </div>
+            <div class="entry__block">
+                <button type="submit" id="generate">Generate</button>
+            </div>
+            <ul class="entry__errors"></ul>
+        </form>
+    </div>
+    <div class="copy">
+    <p style="background:#000; color:#fff; text-align: center;">&copy; Udacity</p>
+    <script src="app.js"></script>
+</body>
+</html>
