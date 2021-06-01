@@ -25,7 +25,7 @@ const listening = _ => {
 }
 
 // Spin up the server
-const port = 8000;
+const port = process.env.PORT || 8000
 app.listen(port, listening)
 
 // Callback function to complete GET '/all'

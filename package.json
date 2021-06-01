@@ -1,0 +1,23 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "This Project is consuming weather data from openweather API by providing Zip Code of the city\r ## The Development\r The UI will be updated once you provided a correct zip code with the following data\r - The current date\r - The city name\r - The country\r - The weather state\r - The atmospheric temperature \r - The humidity\r - The wind speed\r - The atmospheric pressure\r ## The Attribution Copyrights\r - The API Provider is [OpenWeather](https://openweathermap.org/)\r - Background Image by [Pixabay](https://pixabay.com/photos/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=690293)\r - Icons Provided by [Font Awesome Library](https://fontawesome.com/v5.15/icons?d=gallery&p=2)",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahman-a/node-weather-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rahman-a/node-weather-api/issues"
+  },
+  "homepage": "https://github.com/rahman-a/node-weather-api#readme"
+}
