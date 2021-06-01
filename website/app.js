@@ -22,7 +22,7 @@ let isLoading = true;
 let errors = [];
 
 // Personal API Key for OpenWeatherMap API
-const baseAPI = 'http://api.openweathermap.org/data/2.5/weather?zip=';
+const baseAPI = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 const apiKey = '&appid=53c951eb657ffba0a5d9e60f81499e31';
 const apiUnit = '&units=metric';
 
